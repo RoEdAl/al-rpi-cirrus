@@ -2,7 +2,7 @@
 
 pkgname='rpi-cirrus'
 pkgdesc='Scripts and config files for the Cirrus Logic Audio Card'
-url=('http://github.com/RoEdAl/rpi-cirrus-config')
+url='http://github.com/RoEdAl/rpi-cirrus-config'
 pkgver='1'
 pkgrel='1'
 arch=('any')
