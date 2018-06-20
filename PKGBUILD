@@ -3,21 +3,21 @@
 pkgname='rpi-cirrus'
 pkgdesc='Scripts and config files for the Cirrus Logic Audio Card'
 url='http://github.com/RoEdAl/rpi-cirrus-config'
-pkgver='1'
+pkgver='1.0'
 pkgrel='1'
 arch=('any')
 license=('GPL')
 depends=('alsa-utils')
 
 source=(
-    "${pkgname}::git+http://github.com/RoEdAl/rpi-cirrus-config.git#branch=rpicirrusctl"
+    "${pkgname}-config-${pkgver}.tar.gz::http://github.com/RoEdAl/rpi-cirrus-config/archive/v${pkgver}.tar.gz"
 )
 
-md5sums=('SKIP')
+md5sums=('805935019865f0564654cca140ed1b96')
 
 package(){
 
-    cd ${srcdir}/${pkgname}
+    cd ${srcdir}/${pkgname}-config-${pkgver}
 
     install -d -m 0755 ${pkgdir}/usr/share/alsa/cards
     install -p -m 0644 alsa/RPiCirrus.conf ${pkgdir}/usr/share/alsa/cards
